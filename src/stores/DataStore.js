@@ -2,7 +2,7 @@
  * @Author: Muhammad.Allak  
 * @Date: 2019-11-13 23:33:07  
  * @Last Modified by: Muhammad_Allak
- * @Last Modified time: 2019-11-13 23:34:45
+ * @Last Modified time: 2019-11-14 10:46:37
 */
 import {EventEmitter} from "events";
 import dispatcher from "../dispatcher";
@@ -28,6 +28,11 @@ class DataStore extends EventEmitter{
   handelActions(action){
     switch(action.type) {
       case AppAction.RECEIVE_DATA:{
+        this.data = action.value;
+        this.emit("storeUpdated");
+        break;
+      }
+      case AppAction.TIME_DATA:{
         this.data = action.value;
         this.emit("storeUpdated");
         break;

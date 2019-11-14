@@ -2,7 +2,7 @@
  * @Author: Muhammad.Allak  
 * @Date: 2019-11-13 23:33:07  
  * @Last Modified by: Muhammad_Allak
- * @Last Modified time: 2019-11-13 23:34:29
+ * @Last Modified time: 2019-11-14 11:53:02
 */
 import React from "react";
 import DataStore from "../stores/DataStore";
@@ -48,6 +48,7 @@ export default class DataList extends React.Component {
                   
                   <ul class="list-group list-group-flush" style = {textStyles}>
                     <li style={{backgroundColor:'black'}}></li> 
+                    <li class="list-group-item">City :  {item.place}</li>
                     <li class="list-group-item">Type :  {item.type}</li>
                     <li class="list-group-item">Unit :  {item.unit}</li>
                    
@@ -66,7 +67,7 @@ export default class DataList extends React.Component {
         return (
               <div>
                    
-          
+                         <h3> Data List</h3>
                          <ul class="list-group list-group-flush">
                                 {list}
                          </ul>
